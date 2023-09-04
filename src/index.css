@@ -1,3 +1,5 @@
+@layer reset, base, tokens, recipes, utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -20,16 +22,61 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color: #fafafa;
+    background-color: #242424;
+  }
+
+  input {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  button {
+    background-color: #fafafa;
+    color: #18181b;
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #09090b;
     background-color: #ffffff;
+  }
+
+  input {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  button {
+    background-color: #18181b;
+    color: #fafafa;
   }
 }
