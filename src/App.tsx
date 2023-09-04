@@ -1,14 +1,16 @@
-import { FormEvent } from 'react'
-import Entrance from './components/entrance'
+import { useState } from 'react'
+import Entrance from './components/Entrance'
 
 function App() {
-  const onSubmit = (e: FormEvent) => {
-    e.preventDefault()
+  const [username, setUsername] = useState('')
+
+  const onSubmit = (name: string) => {
+    setUsername(name)
   }
 
   return (
     <>
-      <Entrance onSubmit={onSubmit} />
+      {username ? <>Your name: {username}</> : <Entrance onSubmit={onSubmit} />}
     </>
   )
 }
