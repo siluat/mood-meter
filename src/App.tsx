@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Entrance from './components/Entrance'
+import MoodBoard from './components/MoodBoard'
 
 function App() {
   const [username, setUsername] = useState('')
@@ -8,11 +9,7 @@ function App() {
     setUsername(name)
   }
 
-  return (
-    <>
-      {username ? <>Your name: {username}</> : <Entrance onSubmit={onSubmit} />}
-    </>
-  )
+  return <>{username ? <MoodBoard /> : <Entrance onSubmit={onSubmit} />}</>
 }
 
 export default App
