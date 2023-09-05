@@ -29,7 +29,7 @@ export default function MoodBoard({
   return (
     <div
       className={vstack({
-        w: '100px',
+        w: '110px',
         h: '50px',
         cursor: 'pointer',
         justify: 'center',
@@ -48,7 +48,7 @@ export default function MoodBoard({
     >
       <p
         className={css({
-          fontSize: '0.875rem',
+          fontSize: '0.8rem',
           fontWeight: 'bold',
         })}
         style={{ color: fontColor }}

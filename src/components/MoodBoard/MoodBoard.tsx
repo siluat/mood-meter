@@ -15,9 +15,9 @@ export default function MoodBoard({ onSelectMood }: Props) {
       className={grid({
         p: '1rem',
         columns: 10,
-        overflow: 'scroll',
+        overflow: 'auto',
         gap: '1',
-        minW: '1068px',
+        minW: '1168px',
         minH: '568px',
       })}
     >
