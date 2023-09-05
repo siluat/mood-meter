@@ -15,7 +15,17 @@ interface Props {
   onSelect: (mood: Mood) => void
 }
 
-export default function MoodBoard({ ko, en, fontColor, color }: Props) {
+export default function MoodBoard({
+  ko,
+  en,
+  fontColor,
+  color,
+  onSelect,
+}: Props) {
+  const handleSelect = () => {
+    onSelect({ color, ko, en })
+  }
+
   return (
     <div
       className={vstack({
@@ -24,9 +34,17 @@ export default function MoodBoard({ ko, en, fontColor, color }: Props) {
         cursor: 'pointer',
         justify: 'center',
         gap: 0,
-        _hover: { boxShadow: '0 0 0 3px rgba(0, 0, 0, 0.5)' },
+        _hover: {
+          '@media (prefers-color-scheme: light)': {
+            boxShadow: '0 0 0 3px rgba(0, 0, 0, 0.5)',
+          },
+          '@media (prefers-color-scheme: dark)': {
+            boxShadow: '0 0 0 3px rgba(255, 255, 255, 0.5)',
+          },
+        },
       })}
       style={{ backgroundColor: color }}
+      onClick={handleSelect}
     >
       <p
         className={css({

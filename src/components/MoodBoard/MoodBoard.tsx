@@ -1,8 +1,14 @@
 import { grid } from '../../../styled-system/patterns'
 import MoodBox, { Mood } from './MoodBox'
 
-export default function MoodBoard() {
-  const handleSelect = (mood: Mood) => {}
+interface Props {
+  onSelectMood: (mood: Mood) => void
+}
+
+export default function MoodBoard({ onSelectMood }: Props) {
+  const handleSelect = (mood: Mood) => {
+    onSelectMood(mood)
+  }
 
   return (
     <div
