@@ -25,6 +25,10 @@ function App() {
   const [username, setUsername] = useState('')
   const [userStates, setUserStates] = useState<UserState[]>([])
 
+  const currentUserState = userStates.find(
+    (userState) => userState.userId === userId
+  )
+
   const onSubmit = (name: string) => {
     setUsername(name)
   }
@@ -70,9 +74,12 @@ function App() {
 
   return (
     <>
-      {username ? (
+      {currentUserState ? (
         <>
-          <MoodBoard onSelectMood={handleSelectMood} />
+          <MoodBoard
+            selectedMoodList={currentUserState.moodList}
+            onSelectMood={handleSelectMood}
+          />
           <UserStates userStates={userStates} />
         </>
       ) : (

@@ -2,10 +2,11 @@ import { grid } from '../../../styled-system/patterns'
 import MoodBox, { Mood } from './MoodBox'
 
 interface Props {
+  selectedMoodList: Mood[]
   onSelectMood: (mood: Mood) => void
 }
 
-export default function MoodBoard({ onSelectMood }: Props) {
+export default function MoodBoard({ selectedMoodList, onSelectMood }: Props) {
   const handleSelect = (mood: Mood) => {
     onSelectMood(mood)
   }
@@ -26,6 +27,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Enraged"
         color="#821f22"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -33,6 +35,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Panicked"
         color="#bb2224"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -40,6 +43,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Stressed"
         color="#dd4726"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -47,6 +51,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Jittery"
         color="#f85627"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -54,6 +59,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Shocked"
         color="#f97b26"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -62,6 +68,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Surprised"
         color="#fae767"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -69,6 +76,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Upbeat"
         color="#f9d539"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -76,6 +84,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Festive"
         color="#f9cb3a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -83,6 +92,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Exhilarated"
         color="#f9b83a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -90,6 +100,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Ecstatic"
         color="#f9ad26"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -98,6 +109,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Livid"
         color="#821f22"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -105,6 +117,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Furious"
         color="#bb2224"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -112,6 +125,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Frustrated"
         color="#dd4726"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -119,6 +133,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Tense"
         color="#f85627"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -126,6 +141,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Stunned"
         color="#f97b26"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -134,6 +150,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Hyper"
         color="#fae767"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -141,6 +158,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Cheerful"
         color="#f9d539"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -148,6 +166,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Motivated"
         color="#f9cb3a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -155,6 +174,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Inspired"
         color="#f9b83a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -162,6 +182,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Elated"
         color="#f9ad26"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -170,6 +191,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Fuming"
         color="#821f22"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -177,6 +199,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Frightened"
         color="#bb2224"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -184,6 +207,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Angry"
         color="#dd4726"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -191,6 +215,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Nervous"
         color="#f85627"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -198,6 +223,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Restless"
         color="#f97b26"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -206,6 +232,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Energized"
         color="#fae767"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -213,6 +240,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Lively"
         color="#f9d539"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -220,6 +248,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Excited"
         color="#f9cb3a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -227,6 +256,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Optimistic"
         color="#f9b83a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -234,6 +264,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Enthusiastic"
         color="#f9ad26"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -242,6 +273,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Anxious"
         color="#821f22"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -249,6 +281,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Apprehensive"
         color="#bb2224"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -256,6 +289,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Worried"
         color="#dd4726"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -263,6 +297,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Irritated"
         color="#f85627"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -270,6 +305,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Annoyed"
         color="#f97b26"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -278,6 +314,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Pleased"
         color="#fae767"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -285,6 +322,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Focused"
         color="#f9d539"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -292,6 +330,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Happy"
         color="#f9cb3a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -299,6 +338,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Proud"
         color="#f9b83a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -306,6 +346,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Thrilled"
         color="#f9ad26"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -314,6 +355,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Repulsed"
         color="#821f22"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -321,6 +363,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Troubled"
         color="#bb2224"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -328,6 +371,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Concerned"
         color="#dd4726"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -335,6 +379,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Uneasy"
         color="#f85627"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -342,6 +387,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Peeved"
         color="#f97b26"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -350,6 +396,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Pleasant"
         color="#fae767"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -357,6 +404,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Joyful"
         color="#f9d539"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -364,6 +412,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Hopeful"
         color="#f9cb3a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -371,6 +420,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Playful"
         color="#f9b83a"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -378,6 +428,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Blissful"
         color="#f9ad26"
         fontColor="black"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -386,6 +437,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Disgusted"
         color="#231f80"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -393,6 +445,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Glum"
         color="#232299"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -400,6 +453,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Disappointed"
         color="#2348ba"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -407,6 +461,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Down"
         color="#2672e2"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -414,6 +469,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Apathetic"
         color="#26a4f0"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -422,6 +478,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="At Ease"
         color="#9cd526"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -429,6 +486,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Easygoing"
         color="#7ec124"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -436,6 +494,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Content"
         color="#66b123"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -443,6 +502,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Loving"
         color="#23a626"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -450,6 +510,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Fulfilled"
         color="#228d23"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -458,6 +519,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Pessimistic"
         color="#231f80"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -465,6 +527,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Morose"
         color="#232299"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -472,6 +535,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Discouraged"
         color="#2348ba"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -479,6 +543,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Sad"
         color="#2672e2"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -486,6 +551,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Bored"
         color="#26a4f0"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -494,6 +560,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Calm"
         color="#9cd526"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -501,6 +568,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Secure"
         color="#7ec124"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -508,6 +576,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Satisfied"
         color="#66b123"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -515,6 +584,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Grateful"
         color="#23a626"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -522,6 +592,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Touched"
         color="#228d23"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -530,6 +601,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Alienated"
         color="#231f80"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -537,6 +609,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Miserable"
         color="#232299"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -544,6 +617,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Lonely"
         color="#2348ba"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -551,6 +625,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Disheartened"
         color="#2672e2"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -558,6 +633,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Tired"
         color="#26a4f0"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -566,6 +642,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Relaxed"
         color="#9cd526"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -573,6 +650,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Chill"
         color="#7ec124"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -580,6 +658,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Restful"
         color="#66b123"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -587,6 +666,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Blessed"
         color="#23a626"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -594,6 +674,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Balanced"
         color="#228d23"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -602,6 +683,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Despondent"
         color="#231f80"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -609,6 +691,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Depressed"
         color="#232299"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -616,6 +699,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Sullen"
         color="#2348ba"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -623,6 +707,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Exhausted"
         color="#2672e2"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -630,6 +715,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Fatigued"
         color="#26a4f0"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -638,6 +724,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Metlow"
         color="#9cd526"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -645,6 +732,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Thoughtful"
         color="#7ec124"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -652,6 +740,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Peaceful"
         color="#66b123"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -659,6 +748,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Comfortable"
         color="#23a626"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -666,6 +756,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Carefree"
         color="#228d23"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -674,6 +765,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Despairing"
         color="#231f80"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -681,6 +773,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Hopeless"
         color="#232299"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -688,6 +781,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Desolate"
         color="#2348ba"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -695,6 +789,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Spent"
         color="#2672e2"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -702,6 +797,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Drained"
         color="#26a4f0"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
 
@@ -710,6 +806,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Sleepy"
         color="#9cd526"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -717,6 +814,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Complacent"
         color="#7ec124"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -724,6 +822,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Tranquil"
         color="#66b123"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -731,6 +830,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Cozy"
         color="#23a626"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
       <MoodBox
@@ -738,6 +838,7 @@ export default function MoodBoard({ onSelectMood }: Props) {
         en="Serene"
         color="#228d23"
         fontColor="white"
+        selectedMoodList={selectedMoodList}
         onSelect={handleSelect}
       />
     </div>
