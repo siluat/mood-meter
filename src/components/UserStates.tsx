@@ -1,3 +1,4 @@
+import { css } from '../../styled-system/css'
 import { UserState } from '../App'
 
 interface Props {
@@ -14,7 +15,17 @@ export default function UserState({ userStates }: Props) {
           <p key={state.userId}>
             <span>{state.username}: </span>
             {state.moodList.map((mood) => (
-              <span key={mood.ko} style={{ color: mood.color }}>
+              <span
+                key={mood.ko}
+                style={{ color: mood.color }}
+                className={css({
+                  p: '0.1rem',
+                  '@media (prefers-color-scheme: dark)': {
+                    bg: 'white',
+                    borderRadius: '0.1rem',
+                  },
+                })}
+              >
                 {`${mood.ko} (${mood.en})`}
               </span>
             ))}
