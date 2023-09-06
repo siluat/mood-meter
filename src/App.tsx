@@ -35,6 +35,13 @@ function App() {
   }
 
   const handleSelectMood = async (mood: Mood) => {
+    if (moodList.some((m) => m.ko === mood.ko && m.en === mood.en)) {
+      setMoodList((prev) =>
+        prev.filter((m) => m.ko !== mood.ko || m.en !== mood.en)
+      )
+      return
+    }
+
     setMoodList([mood])
   }
 
