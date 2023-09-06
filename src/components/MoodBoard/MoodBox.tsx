@@ -23,7 +23,9 @@ export default function MoodBoard({
   selectedMoodList,
   onSelect,
 }: Props) {
-  const selected = selectedMoodList.some((mood) => mood.ko === ko)
+  const selected = selectedMoodList.some(
+    (mood) => mood.ko === ko && mood.en === en
+  )
 
   const handleSelect = () => {
     onSelect({ color, ko, en })

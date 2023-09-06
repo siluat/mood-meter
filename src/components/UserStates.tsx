@@ -16,7 +16,7 @@ export default function UserState({ userStates }: Props) {
             <span>{state.username}: </span>
             {state.moodList.map((mood) => (
               <span
-                key={mood.ko}
+                key={`${mood.ko}-${mood.en}`}
                 style={{ color: mood.color }}
                 className={css({
                   p: '0.1rem',
