@@ -6,6 +6,8 @@ import MoodBoard from './components/MoodBoard'
 import { Mood } from './components/MoodBoard/MoodBox'
 import UserStates from './components/UserStates'
 
+const MAX_MOOD_COUNT = 2
+
 const supabaseClient = createClient(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_KEY
@@ -42,7 +44,12 @@ function App() {
       return
     }
 
-    setMoodList([mood])
+    if (moodList.length >= MAX_MOOD_COUNT) {
+      alert('최대 2개의 무드를 선택할 수 있습니다.')
+      return
+    }
+
+    setMoodList([...moodList, mood])
   }
 
   useEffect(() => {
