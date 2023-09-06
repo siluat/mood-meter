@@ -8,14 +8,16 @@ export default function UserState({ userStates }: Props) {
   return (
     <>
       {userStates.map((state) => {
-        if (!state.mood) return null
+        if (state.moodList.length === 0) return null
 
         return (
           <p key={state.userId}>
             <span>{state.username}: </span>
-            <span style={{ color: state.mood.color }}>
-              {`${state.mood.ko} (${state.mood.en})`}
-            </span>
+            {state.moodList.map((mood) => (
+              <span key={mood.ko} style={{ color: mood.color }}>
+                {`${mood.ko} (${mood.en})`}
+              </span>
+            ))}
           </p>
         )
       })}

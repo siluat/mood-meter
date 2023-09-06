@@ -18,7 +18,7 @@ const moodMeterChannel = supabaseClient.channel('mood-meter')
 export type UserState = {
   userId: string
   username: string
-  mood?: Mood
+  moodList: Mood[]
 }
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
     moodMeterChannel.track({
       userId,
       username,
-      mood,
+      moodList: [mood],
     })
   }
 
@@ -47,7 +47,7 @@ function App() {
           acc.push({
             userId: state[0].userId,
             username: state[0].username,
-            mood: state[0].mood,
+            moodList: state[0].moodList,
           })
           return acc
         }, [] as UserState[])
@@ -60,6 +60,7 @@ function App() {
     moodMeterChannel.track({
       userId,
       username,
+      moodList: [],
     })
 
     return () => {
