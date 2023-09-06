@@ -23,6 +23,7 @@ export type UserState = {
 
 function App() {
   const [username, setUsername] = useState('')
+  const [moodList, setMoodList] = useState<Mood[]>([])
   const [userStates, setUserStates] = useState<UserState[]>([])
 
   const currentUserState = userStates.find(
@@ -34,11 +35,7 @@ function App() {
   }
 
   const handleSelectMood = async (mood: Mood) => {
-    moodMeterChannel.track({
-      userId,
-      username,
-      moodList: [mood],
-    })
+    setMoodList([mood])
   }
 
   useEffect(() => {
@@ -64,13 +61,23 @@ function App() {
     moodMeterChannel.track({
       userId,
       username,
-      moodList: [],
+      moodList,
     })
 
     return () => {
       moodMeterChannel.state === 'joined' && moodMeterChannel.unsubscribe()
     }
   }, [username])
+
+  useEffect(() => {
+    if (moodMeterChannel.state !== 'joined') return
+
+    moodMeterChannel.track({
+      userId,
+      username,
+      moodList,
+    })
+  }, [moodList])
 
   return (
     <>
